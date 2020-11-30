@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Stage, StageType } from "../Stages/stages";
+import Button from "../styles/Button";
 import Continue from "./Continue";
 import ProgressBar from "./ProgressBar";
 
@@ -37,6 +38,10 @@ const Page = (props: Props) => {
       <ProgressBar percentComplete={props.percentComplete} />
       {props.stage.type === StageType.PHOTO ? (
         <Image src={props.stage.photo?.image}></Image>
+      ) : props.stage.type === StageType.AUDIO ? (
+        <Button sub={true} onClick={() => props.stage.audio?.sound.play()}>
+          Play
+        </Button>
       ) : (
         <Header>
           {props.stage.type === StageType.CHALLENGE
