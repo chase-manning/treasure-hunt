@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
         --sub: grey;
         --light: white;
         --primary: dodgerblue;
+        --primary-light: lightcyan;
     }
   
     * {
