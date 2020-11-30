@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { StageType } from "../Stages/stages";
 import Button from "../styles/Button";
+import Popup from "./Popup";
 
 const StyledContinue = styled.div`
   width: 100%;
@@ -34,9 +35,11 @@ type Props = {
 
 const Continue = (props: Props) => {
   const [code, setCode] = useState("");
+  const [error, setError] = useState(false);
 
   const checkCode = () => {
     if (code === props.code) props.nextPage();
+    else setError(true);
   };
 
   return (
@@ -49,6 +52,7 @@ const Continue = (props: Props) => {
       ) : (
         <Button onClick={() => props.nextPage()}>Complete</Button>
       )}
+      <Popup open={error} content={<p>meow</p>} close={() => setError(false)} />
     </StyledContinue>
   );
 };
