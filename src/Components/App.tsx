@@ -24,6 +24,7 @@ function App() {
       <GlobalStyles />
       {stages.map((stage: Stage, index: number) => (
         <Page
+          key={index}
           stage={stage}
           active={state.page === index}
           nextPage={() => setState({ ...state, page: state.page + 1 })}
