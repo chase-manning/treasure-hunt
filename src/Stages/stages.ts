@@ -1,12 +1,16 @@
+import dude from "../assets/dude.png";
+
 export enum StageType {
   RIDDLE,
   CHALLENGE,
+  PHOTO,
 }
 
 export type Stage = {
   type: StageType;
   riddle?: Riddle;
   challenge?: Challenge;
+  photo?: Photo;
 };
 
 export type Riddle = {
@@ -20,7 +24,17 @@ export type Challenge = {
   task: string;
 };
 
+export type Photo = {
+  image: string;
+};
+
 export const stages: Stage[] = [
+  {
+    type: StageType.PHOTO,
+    photo: {
+      image: dude,
+    },
+  },
   {
     type: StageType.RIDDLE,
     riddle: {
