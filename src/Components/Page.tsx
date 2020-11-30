@@ -8,8 +8,9 @@ const StyledPage = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 40px;
 `;
 
 type Props = {
@@ -23,6 +24,7 @@ const Page = (props: Props) => {
 
   return (
     <StyledPage>
+      <div />
       <Continue
         stageType={props.stage.type}
         nextPage={() => props.nextPage()}
