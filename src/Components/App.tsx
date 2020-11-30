@@ -3,6 +3,7 @@ import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import { Stage, stages } from "../Stages/stages";
 import Page from "./Page";
+import Completed from "./Completed";
 
 const StyledApp = styled.div`
   position: fixed;
@@ -31,6 +32,7 @@ function App() {
           percentComplete={state.page / stages.length}
         />
       ))}
+      {state.page === stages.length && <Completed />}
     </StyledApp>
   );
 }
