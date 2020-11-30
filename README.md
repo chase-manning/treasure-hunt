@@ -1,8 +1,8 @@
-# :pirate_flag: Treasure Huny App :pirate_flag:
+# :pirate_flag: Treasure Hunt App :pirate_flag:
 This repo is for the App used in Chase's Treasure Hunt.  
 This is a multi stages treasure hunt based in Takapuna, Auckland, New Zealand.  
 It consists of various riddles and challenges for the goal of finding the hidden treasure!  
-You can view the app live by [clicking here](https://treasure-hunt-b8400.web.app/)!.  
+You can view the app live by [clicking here](https://treasure-hunt-b8400.web.app/)!  
 
 ## :technologist: Technology
 This is a Progressive Web App built in React.  
