@@ -10,6 +10,7 @@ const SyledPopup = styled.div`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
@@ -35,8 +36,10 @@ const Popup = (props: Props) => {
 
   return (
     <SyledPopup>
-      {props.content}
-      <Button onClick={() => props.close()}>Okay</Button>
+      <Content>
+        {props.content}
+        <Button onClick={() => props.close()}>Okay</Button>
+      </Content>
     </SyledPopup>
   );
 };
