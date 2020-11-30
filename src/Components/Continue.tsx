@@ -46,11 +46,14 @@ const Continue = (props: Props) => {
     <StyledContinue>
       {props.stageType === StageType.RIDDLE ? (
         <RiddleSection>
-          <Input></Input>
+          <Input
+            placeholder={"Enter Code.."}
+            onChange={(event: any) => setCode(event.target.value)}
+          ></Input>
           <Button onClick={() => props.nextPage()}>Continue</Button>
         </RiddleSection>
       ) : (
-        <Button onClick={() => props.nextPage()}>Complete</Button>
+        <Button onClick={() => checkCode()}>Complete</Button>
       )}
       <Popup open={error} content={<p>meow</p>} close={() => setError(false)} />
     </StyledContinue>
