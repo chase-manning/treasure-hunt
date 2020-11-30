@@ -17,6 +17,7 @@ const SyledPopup = styled.div`
 
 const Content = styled.div`
   width: 70%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
