@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { StageType } from "../Stages/stages";
+import { Stage, StageType } from "../Stages/stages";
 import Button from "../styles/Button";
 import Popup from "./Popup";
 
@@ -27,9 +27,27 @@ const Input = styled.input`
   margin-bottom: 20px;
 `;
 
+const ErrorContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ErrorHeader = styled.div`
+  font-size: 20px;
+  color: var(--main);
+  margin-bottom: 10px;
+`;
+
+const ErrorSubHeader = styled.div`
+  font-size: 14px;
+  color: var(--sub);
+  margin-bottom: 10px;
+`;
+
 type Props = {
-  stageType: StageType;
-  code?: string;
+  stage: Stage;
   nextPage: () => void;
 };
 
@@ -38,24 +56,33 @@ const Continue = (props: Props) => {
   const [error, setError] = useState(false);
 
   const checkCode = () => {
-    if (code === props.code) props.nextPage();
+    if (code === props.stage.riddle?.code) props.nextPage();
     else setError(true);
   };
 
   return (
     <StyledContinue>
-      {props.stageType === StageType.RIDDLE ? (
+      {props.stage.type === StageType.RIDDLE ? (
         <RiddleSection>
           <Input
             placeholder={"Enter Code.."}
             onChange={(event: any) => setCode(event.target.value)}
           ></Input>
-          <Button onClick={() => props.nextPage()}>Continue</Button>
+          <Button onClick={() => checkCode()}>Continue</Button>
         </RiddleSection>
       ) : (
-        <Button onClick={() => checkCode()}>Complete</Button>
+        <Button onClick={() => props.nextPage()}>Complete</Button>
       )}
-      <Popup open={error} content={<p>meow</p>} close={() => setError(false)} />
+      <Popup
+        open={error}
+        content={
+          <ErrorContent>
+            <ErrorHeader>Wrong Code</ErrorHeader>
+            <ErrorSubHeader>Try agin and better luck next time!</ErrorSubHeader>
+          </ErrorContent>
+        }
+        close={() => setError(false)}
+      />
     </StyledContinue>
   );
 };

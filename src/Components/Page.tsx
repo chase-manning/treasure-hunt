@@ -25,10 +25,7 @@ const Page = (props: Props) => {
   return (
     <StyledPage>
       <div />
-      <Continue
-        stageType={props.stage.type}
-        nextPage={() => props.nextPage()}
-      />
+      <Continue stage={props.stage} nextPage={() => props.nextPage()} />
     </StyledPage>
   );
 };
