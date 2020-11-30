@@ -14,6 +14,10 @@ const StyledPage = styled.div`
   padding: 40px;
 `;
 
+const Image = styled.img`
+  width: 80%;
+`;
+
 const Header = styled.div`
   font-size: 26px;
 `;
@@ -31,11 +35,15 @@ const Page = (props: Props) => {
   return (
     <StyledPage>
       <ProgressBar percentComplete={props.percentComplete} />
-      <Header>
-        {props.stage.type === StageType.CHALLENGE
-          ? props.stage.challenge?.task
-          : props.stage.riddle?.clue}
-      </Header>
+      {props.stage.type === StageType.PHOTO ? (
+        <Image src={props.stage.photo?.image}></Image>
+      ) : (
+        <Header>
+          {props.stage.type === StageType.CHALLENGE
+            ? props.stage.challenge?.task
+            : props.stage.riddle?.clue}
+        </Header>
+      )}
       <Continue stage={props.stage} nextPage={() => props.nextPage()} />
     </StyledPage>
   );
