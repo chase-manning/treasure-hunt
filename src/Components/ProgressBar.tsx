@@ -38,7 +38,7 @@ type Props = {
 };
 
 const ProgressBar = (props: Props) => {
-  const percentString = props.percentComplete + "%";
+  const percentString = props.percentComplete * 100 + "%";
 
   return (
     <StyledProgressbar>
