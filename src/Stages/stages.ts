@@ -11,6 +11,7 @@ export type Stage = {
 
 export type Riddle = {
   clue: string;
+  hint: string;
   location: string;
   code: string;
 };
@@ -23,9 +24,10 @@ export const stages: Stage[] = [
   {
     type: StageType.RIDDLE,
     riddle: {
-      clue: "Where the cat is not brown",
-      location: "In the Carpark",
-      code: "1234",
+      clue: "A Catnap About Bulk",
+      hint: "Anagram",
+      location: "Takapuna Boat Club",
+      code: "3850",
     },
   },
   {
