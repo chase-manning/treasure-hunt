@@ -36,7 +36,7 @@ const Popup = (props: Props) => {
   return (
     <SyledPopup>
       {props.content}
-      <Button>Okay</Button>
+      <Button onClick={() => props.close()}>Okay</Button>
     </SyledPopup>
   );
 };
