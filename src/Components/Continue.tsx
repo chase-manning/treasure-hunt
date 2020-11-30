@@ -21,9 +21,9 @@ const RiddleSection = styled.div`
 `;
 
 const Input = styled.input`
-  padding: 10px;
-  border: solid 1px var(--sub);
-  border-radius: 5px;
+  padding: 15px;
+  border: solid 2px var(--primary);
+  border-radius: 10px;
   margin-bottom: 20px;
 `;
 
