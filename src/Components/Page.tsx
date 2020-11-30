@@ -21,6 +21,7 @@ const Image = styled.img`
 
 const Header = styled.div`
   font-size: 26px;
+  text-align: center;
 `;
 
 type Props = {
