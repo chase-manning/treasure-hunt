@@ -3,9 +3,10 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     :root {
-        --main: "black";
-        --sub: "grey";
-        --primary: "blue":
+        --main: black;
+        --sub: grey;
+        --light: white;
+        --primary: dodgerblue;
     }
   
     * {
