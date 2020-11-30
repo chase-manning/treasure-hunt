@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Stage } from "../Stages/stages";
+import { Stage, StageType } from "../Stages/stages";
 import Continue from "./Continue";
 
 const StyledPage = styled.div`
@@ -11,6 +11,10 @@ const StyledPage = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 40px;
+`;
+
+const Header = styled.div`
+  font-size: 26px;
 `;
 
 type Props = {
@@ -24,7 +28,11 @@ const Page = (props: Props) => {
 
   return (
     <StyledPage>
-      <div />
+      <Header>
+        {props.stage.type === StageType.CHALLENGE
+          ? props.stage.challenge?.task
+          : props.stage.riddle?.clue}
+      </Header>
       <Continue stage={props.stage} nextPage={() => props.nextPage()} />
     </StyledPage>
   );
