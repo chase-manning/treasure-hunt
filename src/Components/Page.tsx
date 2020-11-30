@@ -14,9 +14,12 @@ const StyledPage = styled.div`
 
 type Props = {
   stage: Stage;
+  active: boolean;
 };
 
 const Page = (props: Props) => {
+  if (!props.active) return null;
+
   return (
     <StyledPage>
       <Continue stageType={props.stage.type} />

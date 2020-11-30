@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import { Stage, stages } from "../Stages/stages";
@@ -12,12 +12,18 @@ const StyledApp = styled.div`
   height: 100%;
 `;
 
+class State {
+  page: number = 0;
+}
+
 function App() {
+  const [state, setState] = useState(new State());
+
   return (
     <StyledApp>
       <GlobalStyles />
-      {stages.map((stage: Stage) => (
-        <Page stage={stage} />
+      {stages.map((stage: Stage, index: number) => (
+        <Page stage={stage} active={state.page === index} />
       ))}
     </StyledApp>
   );
