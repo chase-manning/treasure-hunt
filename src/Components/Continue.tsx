@@ -63,7 +63,8 @@ const Continue = (props: Props) => {
   return (
     <StyledContinue>
       {props.stage.type === StageType.RIDDLE ||
-      props.stage.type === StageType.PHOTO ? (
+      props.stage.type === StageType.PHOTO ||
+      props.stage.type === StageType.AUDIO ? (
         <RiddleSection>
           <Input
             placeholder={"Enter Code.."}
