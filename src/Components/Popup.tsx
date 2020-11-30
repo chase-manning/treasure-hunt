@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "../styles/Button";
 
 const SyledPopup = styled.div`
   position: fixed;
@@ -30,7 +31,14 @@ type Props = {
 };
 
 const Popup = (props: Props) => {
-  return <SyledPopup></SyledPopup>;
+  if (!props.open) return null;
+
+  return (
+    <SyledPopup>
+      {props.content}
+      <Button>Okay</Button>
+    </SyledPopup>
+  );
 };
 
 export default Popup;
