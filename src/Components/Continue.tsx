@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { StageType } from "../Stages/stages";
 
@@ -23,6 +23,8 @@ type Props = {
 };
 
 const Continue = (props: Props) => {
+  const [code, setCode] = useState("");
+
   return (
     <StyledContinue>
       {props.stageType === StageType.CHALLENGE ? (
