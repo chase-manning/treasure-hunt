@@ -23,6 +23,7 @@ export type Riddle = {
 };
 
 export type Challenge = {
+  group: boolean;
   task: string;
 };
 
@@ -61,6 +62,7 @@ export const stages: Stage[] = [
   {
     type: StageType.CHALLENGE,
     challenge: {
+      group: true,
       task: "Do 5 star jumps",
     },
   },
