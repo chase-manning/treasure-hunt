@@ -28,6 +28,7 @@ function App() {
           stage={stage}
           active={state.page === index}
           nextPage={() => setState({ ...state, page: state.page + 1 })}
+          percentComplete={state.page / stages.length}
         />
       ))}
     </StyledApp>

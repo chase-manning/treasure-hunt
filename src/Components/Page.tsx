@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Stage, StageType } from "../Stages/stages";
 import Continue from "./Continue";
+import ProgressBar from "./ProgressBar";
 
 const StyledPage = styled.div`
   width: 100%;
@@ -21,6 +22,7 @@ type Props = {
   stage: Stage;
   active: boolean;
   nextPage: () => void;
+  percentComplete: number;
 };
 
 const Page = (props: Props) => {
@@ -28,6 +30,7 @@ const Page = (props: Props) => {
 
   return (
     <StyledPage>
+      <ProgressBar percentComplete={props.percentComplete} />
       <Header>
         {props.stage.type === StageType.CHALLENGE
           ? props.stage.challenge?.task
