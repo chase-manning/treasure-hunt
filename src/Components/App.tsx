@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
+import { Stage, stages } from "../Stages/stages";
+import Page from "./Page";
 
 const StyledApp = styled.div`
   position: fixed;
@@ -14,6 +16,9 @@ function App() {
   return (
     <StyledApp>
       <GlobalStyles />
+      {stages.map((stage: Stage) => (
+        <Page stage={stage} />
+      ))}
     </StyledApp>
   );
 }
