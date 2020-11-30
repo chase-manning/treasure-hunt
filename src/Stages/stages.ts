@@ -47,7 +47,7 @@ export const stages: Stage[] = [
     type: StageType.RIDDLE,
     riddle: {
       location: "Hamster Wheel",
-      clue: "8,1,13,19,20,5,18,23,8,5,5,12",
+      clue: "8,1,13,19,20,5,18 23,8,5,5,12",
       hint: "1=A",
       code: "2938",
     },
