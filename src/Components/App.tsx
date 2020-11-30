@@ -23,7 +23,11 @@ function App() {
     <StyledApp>
       <GlobalStyles />
       {stages.map((stage: Stage, index: number) => (
-        <Page stage={stage} active={state.page === index} />
+        <Page
+          stage={stage}
+          active={state.page === index}
+          nextPage={() => setState({ ...state, page: state.page + 1 })}
+        />
       ))}
     </StyledApp>
   );

@@ -19,12 +19,17 @@ const Button = styled.button`
 
 type Props = {
   stageType: StageType;
+  nextPage: () => void;
 };
 
 const Continue = (props: Props) => {
   return (
     <StyledContinue>
-      <Button>Continue</Button>
+      {props.stageType === StageType.CHALLENGE ? (
+        <Button onClick={() => props.nextPage()}>Complete</Button>
+      ) : (
+        <Button onClick={() => props.nextPage()}>Continue</Button>
+      )}
     </StyledContinue>
   );
 };

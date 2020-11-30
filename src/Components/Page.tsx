@@ -15,6 +15,7 @@ const StyledPage = styled.div`
 type Props = {
   stage: Stage;
   active: boolean;
+  nextPage: () => void;
 };
 
 const Page = (props: Props) => {
@@ -22,7 +23,10 @@ const Page = (props: Props) => {
 
   return (
     <StyledPage>
-      <Continue stageType={props.stage.type} />
+      <Continue
+        stageType={props.stage.type}
+        nextPage={() => props.nextPage()}
+      />
     </StyledPage>
   );
 };
