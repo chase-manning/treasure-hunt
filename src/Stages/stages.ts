@@ -4,6 +4,7 @@ export enum StageType {
   RIDDLE,
   CHALLENGE,
   PHOTO,
+  AUDIO,
 }
 
 export type Stage = {
@@ -11,6 +12,7 @@ export type Stage = {
   riddle?: Riddle;
   challenge?: Challenge;
   photo?: Photo;
+  audio?: Audio;
 };
 
 export type Riddle = {
@@ -28,7 +30,19 @@ export type Photo = {
   image: string;
 };
 
+export type Audio = {
+  sound: HTMLAudioElement;
+};
+
 export const stages: Stage[] = [
+  {
+    type: StageType.AUDIO,
+    audio: {
+      sound: new Audio(
+        "https://www.soundjay.com/mechanical/sounds/chainsaw-03.mp3"
+      ),
+    },
+  },
   {
     type: StageType.PHOTO,
     photo: {
