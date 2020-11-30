@@ -27,7 +27,7 @@ export const stages: Stage[] = [
       clue: "A Catnap About Bulk",
       hint: "Anagram",
       location: "Takapuna Boat Club",
-      code: "3850",
+      code: "1234",
     },
   },
   {
