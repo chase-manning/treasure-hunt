@@ -34,7 +34,7 @@ const TopBar = (props: Props) => {
   return (
     <StyledTopBar>
       <ProgressBar percentComplete={props.percentComplete} />
-      {props.stage.type != StageType.CHALLENGE && (
+      {props.stage.type !== StageType.CHALLENGE && (
         <Hints
           hint={hint()}
           useHint={() => props.useHint()}
