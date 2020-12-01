@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Stage } from "../Stages/stages";
 import TopBar from "./TopBar";
 import PageContent from "./PageContent";
+import Continue from "./Continue";
 
 const StyledPage = styled.div`
   width: 100%;
@@ -35,6 +36,7 @@ const Page = (props: Props) => {
         hints={props.hints}
       />
       <PageContent stage={props.stage} />
+      <Continue stage={props.stage} nextPage={() => props.nextPage()} />
     </StyledPage>
   );
 };
