@@ -4,6 +4,7 @@ import { Stage, StageType } from "../Stages/stages";
 import Button from "../styles/Button";
 import Continue from "./Continue";
 import ProgressBar from "./ProgressBar";
+import Hints from "./Hints";
 
 const StyledPage = styled.div`
   width: 100%;
@@ -13,6 +14,12 @@ const StyledPage = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 40px;
+`;
+
+const TopBar = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Image = styled.img`
@@ -30,6 +37,8 @@ type Props = {
   active: boolean;
   nextPage: () => void;
   percentComplete: number;
+  useHint: () => void;
+  hints: number;
 };
 
 const Page = (props: Props) => {
@@ -37,7 +46,31 @@ const Page = (props: Props) => {
 
   return (
     <StyledPage>
-      <ProgressBar percentComplete={props.percentComplete} />
+      <TopBar>
+        <ProgressBar percentComplete={props.percentComplete} />
+        {props.stage.type === StageType.AUDIO && (
+          <Hints
+            hint={props.stage.audio!.hint}
+            useHint={() => props.useHint()}
+            hints={props.hints}
+          />
+        )}
+        {props.stage.type === StageType.RIDDLE && (
+          <Hints
+            hint={props.stage.riddle!.hint}
+            useHint={() => props.useHint()}
+            hints={props.hints}
+          />
+        )}
+        {props.stage.type === StageType.PHOTO && (
+          <Hints
+            hint={props.stage.photo!.hint}
+            useHint={() => props.useHint()}
+            hints={props.hints}
+          />
+        )}
+      </TopBar>
+
       {props.stage.type === StageType.PHOTO ? (
         <Image src={props.stage.photo?.image}></Image>
       ) : props.stage.type === StageType.AUDIO ? (

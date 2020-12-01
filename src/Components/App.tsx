@@ -15,6 +15,7 @@ const StyledApp = styled.div`
 
 class State {
   page: number = 0;
+  hints: number = 3;
 }
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
           active={state.page === index}
           nextPage={() => setState({ ...state, page: state.page + 1 })}
           percentComplete={state.page / stages.length}
+          useHint={() => setState({ ...state, hints: state.hints - 1 })}
+          hints={state.hints}
         />
       ))}
       {state.page === stages.length && <Completed />}
