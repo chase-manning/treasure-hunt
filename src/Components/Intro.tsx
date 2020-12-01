@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { isPropertySignature } from "typescript";
 import sunlight from "../assets/Sunlight.svg";
 import Button from "../styles/Button";
 
