@@ -12,16 +12,12 @@ const StyledTopBar = styled.div`
 
 type Props = {
   stage: Stage;
-  active: boolean;
-  nextPage: () => void;
   percentComplete: number;
   useHint: () => void;
   hints: number;
 };
 
 const TopBar = (props: Props) => {
-  if (!props.active) return null;
-
   return (
     <StyledTopBar>
       <ProgressBar percentComplete={props.percentComplete} />
