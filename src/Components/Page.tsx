@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Stage, StageType } from "../Stages/stages";
-import Button from "../styles/Button";
-import Continue from "./Continue";
-import ProgressBar from "./ProgressBar";
-import Hints from "./Hints";
+import { Stage } from "../Stages/stages";
 import TopBar from "./TopBar";
+import PageContent from "./PageContent";
 
 const StyledPage = styled.div`
   width: 100%;
@@ -15,16 +12,6 @@ const StyledPage = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 40px;
-`;
-
-const Image = styled.img`
-  width: 80%;
-`;
-
-const Header = styled.div`
-  font-size: 26px;
-  text-align: center;
-  line-height: 1.3;
 `;
 
 type Props = {
@@ -47,21 +34,7 @@ const Page = (props: Props) => {
         useHint={() => props.useHint()}
         hints={props.hints}
       />
-
-      {props.stage.type === StageType.PHOTO ? (
-        <Image src={props.stage.photo?.image}></Image>
-      ) : props.stage.type === StageType.AUDIO ? (
-        <Button sub={true} onClick={() => props.stage.audio?.sound.play()}>
-          Play
-        </Button>
-      ) : (
-        <Header>
-          {props.stage.type === StageType.CHALLENGE
-            ? props.stage.challenge?.task
-            : props.stage.riddle?.clue}
-        </Header>
-      )}
-      <Continue stage={props.stage} nextPage={() => props.nextPage()} />
+      <PageContent stage={props.stage} />
     </StyledPage>
   );
 };
