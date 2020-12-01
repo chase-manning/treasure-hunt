@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import { Stage, stages } from "../Stages/stages";
@@ -22,20 +22,38 @@ class State {
 function App() {
   const [state, setState] = useState(new State());
 
+  useEffect(() => {
+    setState({
+      ...state,
+      page: Number.parseInt(localStorage.getItem("page") || "-1"),
+      hints: Number.parseInt(localStorage.getItem("hints") || "3"),
+    });
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const nextPage = () => {
+    localStorage.setItem("page", (state.page + 1).toString());
+    setState({ ...state, page: state.page + 1 });
+  };
+
+  const reduceHints = () => {
+    localStorage.setItem("hints", (state.hints - 1).toString());
+    setState({ ...state, hints: state.hints - 1 });
+  };
+
   return (
     <StyledApp>
       <GlobalStyles />
-      {state.page === -1 && (
-        <Intro nextPage={() => setState({ ...state, page: state.page + 1 })} />
-      )}
+      {state.page === -1 && <Intro nextPage={() => nextPage()} />}
       {stages.map((stage: Stage, index: number) => (
         <Page
           key={index}
           stage={stage}
           active={state.page === index}
-          nextPage={() => setState({ ...state, page: state.page + 1 })}
+          nextPage={() => nextPage()}
           percentComplete={state.page / stages.length}
-          useHint={() => setState({ ...state, hints: state.hints - 1 })}
+          useHint={() => reduceHints()}
           hints={state.hints}
         />
       ))}
