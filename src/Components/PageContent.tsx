@@ -5,12 +5,9 @@ import Button from "../styles/Button";
 
 const StyledPageContent = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 40px;
 `;
 
 const Image = styled.img`
