@@ -28,23 +28,29 @@ type Props = {
 };
 
 const PageContent = (props: Props) => {
-  return (
-    <StyledPageContent>
-      {props.stage.type === StageType.PHOTO ? (
-        <Image src={props.stage.photo?.image}></Image>
-      ) : props.stage.type === StageType.AUDIO ? (
-        <Button sub={true} onClick={() => props.stage.audio?.sound.play()}>
-          Play
-        </Button>
-      ) : (
-        <Header>
-          {props.stage.type === StageType.CHALLENGE
-            ? props.stage.challenge?.task
-            : props.stage.riddle?.clue}
-        </Header>
-      )}
-    </StyledPageContent>
+  const image = () => <Image src={props.stage.photo?.image}></Image>;
+  const audio = () => (
+    <Button sub={true} onClick={() => props.stage.audio?.sound.play()}>
+      Play
+    </Button>
   );
+  const challenge = () => <Header>{props.stage.challenge?.task}</Header>;
+  const riddle = () => <Header>{props.stage.riddle?.clue}</Header>;
+
+  const content = () => {
+    switch (props.stage.type) {
+      case StageType.PHOTO:
+        return image();
+      case StageType.AUDIO:
+        return audio();
+      case StageType.CHALLENGE:
+        return challenge();
+      case StageType.RIDDLE:
+        return riddle();
+    }
+  };
+
+  return <StyledPageContent>{content()}</StyledPageContent>;
 };
 
 export default PageContent;
