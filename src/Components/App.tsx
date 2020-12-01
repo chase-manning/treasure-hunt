@@ -4,6 +4,7 @@ import GlobalStyles from "./GlobalStyles";
 import { Stage, stages } from "../Stages/stages";
 import Page from "./Page";
 import Completed from "./Completed";
+import Intro from "./Intro";
 
 const StyledApp = styled.div`
   position: fixed;
@@ -14,7 +15,7 @@ const StyledApp = styled.div`
 `;
 
 class State {
-  page: number = 0;
+  page: number = -1;
   hints: number = 3;
 }
 
@@ -24,6 +25,9 @@ function App() {
   return (
     <StyledApp>
       <GlobalStyles />
+      {state.page === -1 && (
+        <Intro nextPage={() => setState({ ...state, page: state.page + 1 })} />
+      )}
       {stages.map((stage: Stage, index: number) => (
         <Page
           key={index}
