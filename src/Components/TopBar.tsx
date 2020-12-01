@@ -18,26 +18,25 @@ type Props = {
 };
 
 const TopBar = (props: Props) => {
+  const hint = () => {
+    switch (props.stage.type) {
+      case StageType.AUDIO:
+        return props.stage.audio!.hint;
+      case StageType.RIDDLE:
+        return props.stage.riddle!.hint;
+      case StageType.PHOTO:
+        return props.stage.audio!.hint;
+      default:
+        return "";
+    }
+  };
+
   return (
     <StyledTopBar>
       <ProgressBar percentComplete={props.percentComplete} />
-      {props.stage.type === StageType.AUDIO && (
+      {props.stage.type != StageType.CHALLENGE && (
         <Hints
-          hint={props.stage.audio!.hint}
-          useHint={() => props.useHint()}
-          hints={props.hints}
-        />
-      )}
-      {props.stage.type === StageType.RIDDLE && (
-        <Hints
-          hint={props.stage.riddle!.hint}
-          useHint={() => props.useHint()}
-          hints={props.hints}
-        />
-      )}
-      {props.stage.type === StageType.PHOTO && (
-        <Hints
-          hint={props.stage.photo!.hint}
+          hint={hint()}
           useHint={() => props.useHint()}
           hints={props.hints}
         />
