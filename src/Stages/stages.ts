@@ -223,6 +223,22 @@ export const stages: Stage[] = [
       task: "Earn money from a stranger for busking",
     },
   },
+  {
+    type: StageType.RIDDLE,
+    riddle: {
+      location: "Tennis Court",
+      clue: "796.342 GIFF",
+      hint: "Melvil Dewey",
+      code: "8849",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: false,
+      task: "Serve tennis ball",
+    },
+  },
   // Library leading to tennis court
   // Cannons
   {
