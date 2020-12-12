@@ -310,17 +310,17 @@ export const stages: Stage[] = [
   {
     type: StageType.RIDDLE,
     riddle: {
-      location: "Pools",
-      clue: "P+🏫-sch",
-      hint: "Swimming",
-      code: "1827",
+      location: "Above Rope Swing",
+      clue: "a+💑l=b 🌹s=p s+💍r=w",
+      hint: "Above Rope Swing",
+      code: "5003",
     },
   },
   {
     type: StageType.CHALLENGE,
     challenge: {
       group: false,
-      task: "Go in and ask if you are allowed to swim naked",
+      task: "Climb half way up the tallest rope",
     },
   },
   //Treasure
