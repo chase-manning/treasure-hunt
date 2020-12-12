@@ -239,8 +239,6 @@ export const stages: Stage[] = [
       task: "Serve tennis ball",
     },
   },
-  // Library leading to tennis court
-  // Cannons
   {
     type: StageType.AUDIO,
     audio: {
@@ -261,7 +259,22 @@ export const stages: Stage[] = [
         "Buy the person taller than you a drink, tallest buys shortest, could be time for payback?",
     },
   },
-  //Cannons
+  {
+    type: StageType.RIDDLE,
+    riddle: {
+      location: "Cannons",
+      clue: "What a pirate would use to shoot down another ship",
+      hint: "Behind the Mall",
+      code: "4188",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: false,
+      task: "Dunk your head underwater",
+    },
+  },
   {
     type: StageType.RIDDLE,
     riddle: {
