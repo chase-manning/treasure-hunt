@@ -174,7 +174,39 @@ export const stages: Stage[] = [
       task: "Get a photo of a stranger posing with the statue",
     },
   },
-  //Liquor Store
+  {
+    type: StageType.RIDDLE,
+    riddle: {
+      location: "Park Tunnel",
+      clue: "Become a Mole",
+      hint: "Moles tunnel into the ground and make holes",
+      code: "6932",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: true,
+      task: "Fit all people on one swing and swing it",
+    },
+  },
+  {
+    type: StageType.RIDDLE,
+    riddle: {
+      location: "Thirsty Liquor",
+      clue:
+        "I am a dangerous place, filled with aggresive bears. I am a haunted place, home to many spirits.",
+      hint: "Bears and Spirits have two meanings",
+      code: "9012",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: true,
+      task: "Buy a bottle of rum and finish it between you",
+    },
+  },
   {
     type: StageType.RIDDLE,
     riddle: {
