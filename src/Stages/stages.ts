@@ -93,7 +93,22 @@ export const stages: Stage[] = [
       task: "Have a shower",
     },
   },
-  //Comass thing
+  {
+    type: StageType.RIDDLE,
+    riddle: {
+      location: "Defibrillator",
+      clue: "N3 W20",
+      hint: "Shower => Direction => Steps",
+      code: "8710",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: false,
+      task: "Do a backflip off a swing",
+    },
+  },
   {
     type: StageType.RIDDLE,
     riddle: {
