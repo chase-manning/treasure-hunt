@@ -323,5 +323,21 @@ export const stages: Stage[] = [
       task: "Climb half way up the tallest rope",
     },
   },
+  {
+    type: StageType.RIDDLE,
+    riddle: {
+      location: "Chimney",
+      clue: "I'm a heavy smoker so they said. I stand tall, big and red.",
+      hint: "Santa might come down me",
+      code: "4799",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: false,
+      task: "Climb half way up the tallest rope",
+    },
+  },
   //Treasure
 ];
