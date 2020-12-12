@@ -220,7 +220,7 @@ export const stages: Stage[] = [
     type: StageType.CHALLENGE,
     challenge: {
       group: false,
-      task: "Let everyone dress you, then get a library card",
+      task: "Earn money from a stranger for busking",
     },
   },
   // Library leading to tennis court
