@@ -294,6 +294,22 @@ export const stages: Stage[] = [
   {
     type: StageType.RIDDLE,
     riddle: {
+      location: "Sink",
+      clue: "I have a plug with no electricity",
+      hint: "Outdoor Sink",
+      code: "2979",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: false,
+      task: "Do a hand stand for 5 seconds",
+    },
+  },
+  {
+    type: StageType.RIDDLE,
+    riddle: {
       location: "Pools",
       clue: "P+🏫-sch",
       hint: "Swimming",
