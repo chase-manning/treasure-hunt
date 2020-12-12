@@ -278,7 +278,7 @@ export const stages: Stage[] = [
   {
     type: StageType.RIDDLE,
     riddle: {
-      location: "Lake Pupuke",
+      location: "Lake Pupuke Jetty",
       clue: "-36.7853104, 174.7672319",
       hint: "Jetty",
       code: "3456",
