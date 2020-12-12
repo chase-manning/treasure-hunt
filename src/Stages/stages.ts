@@ -1,5 +1,6 @@
 import dude from "../assets/dude.png";
 import bikes from "../assets/bikes.png";
+import treasureMap from "../assets/treasure-map.png";
 
 export enum StageType {
   RIDDLE,
@@ -339,5 +340,20 @@ export const stages: Stage[] = [
       task: "Climb half way up the tallest rope",
     },
   },
-  //Treasure
+  {
+    type: StageType.PHOTO,
+    photo: {
+      location: "Mens Bathroom",
+      image: treasureMap,
+      hint: "A Chest in the Mens Bathroom",
+      code: "4733",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: false,
+      task: "Get a photo of a stranger posing with the statue",
+    },
+  },
 ];
