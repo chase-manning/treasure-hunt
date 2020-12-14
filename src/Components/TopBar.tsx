@@ -25,7 +25,7 @@ const TopBar = (props: Props) => {
       case StageType.RIDDLE:
         return props.stage.riddle!.hint;
       case StageType.PHOTO:
-        return props.stage.audio!.hint;
+        return props.stage.photo!.hint;
       default:
         return "";
     }
