@@ -196,8 +196,8 @@ export const stages: Stage[] = [
     riddle: {
       location: "Thirsty Liquor",
       clue:
-        "I am a dangerous place, filled with aggresive bears. I am a haunted place, home to many spirits.",
-      hint: "Bears and Spirits have two meanings",
+        "I am a dangerous place, filled with aggresive bears. I am a haunted place, home to many spirits. My thirst is insatiable.",
+      hint: "Bears and Spirits have two meanings. Thirsty ______",
       code: "9012",
     },
   },
@@ -237,7 +237,7 @@ export const stages: Stage[] = [
     type: StageType.CHALLENGE,
     challenge: {
       group: false,
-      task: "Serve tennis ball",
+      task: "Serve a tennis ball",
     },
   },
   {
@@ -273,7 +273,7 @@ export const stages: Stage[] = [
     type: StageType.CHALLENGE,
     challenge: {
       group: false,
-      task: "Dunk your head underwater",
+      task: "Ride the cannon like a surf board!",
     },
   },
   {
@@ -347,13 +347,6 @@ export const stages: Stage[] = [
       image: treasureMap,
       hint: "A Chest in the Mens Bathroom",
       code: "4733",
-    },
-  },
-  {
-    type: StageType.CHALLENGE,
-    challenge: {
-      group: false,
-      task: "Get a photo of a stranger posing with the statue",
     },
   },
 ];
