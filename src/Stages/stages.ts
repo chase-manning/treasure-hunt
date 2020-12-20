@@ -124,7 +124,7 @@ export const stages: Stage[] = [
     challenge: {
       group: false,
       task:
-        "Stand at the front of the biggest boat reinact the 'I'm Flying' Titanic Scene",
+        "Stand at the front of the biggest boat and reinact the 'I'm Flying' Titanic Scene",
     },
   },
   {
