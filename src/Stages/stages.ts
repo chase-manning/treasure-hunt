@@ -47,85 +47,17 @@ export const stages: Stage[] = [
   {
     type: StageType.RIDDLE,
     riddle: {
-      location: "Hamster Wheel",
-      clue: "8,1,13,19,20,5,18 23,8,5,5,12",
-      hint: "1=A",
-      code: "2938",
+      location: "Giant Owl",
+      clue: "7,9,1,14,20 15,23,12",
+      hint: "A = 1 (Starbucks)",
+      code: "1773",
     },
   },
   {
     type: StageType.CHALLENGE,
     challenge: {
       group: false,
-      task: "Do a full 360 including going upside down",
-    },
-  },
-  {
-    type: StageType.AUDIO,
-    audio: {
-      location: "Tree Stump",
-      sound: new Audio(
-        "https://www.soundjay.com/mechanical/sounds/chainsaw-03.mp3"
-      ),
-      hint: "Tree Stump",
-      code: "9149",
-    },
-  },
-  {
-    type: StageType.CHALLENGE,
-    challenge: {
-      group: true,
-      task: "Go down the biggest slide at the park",
-    },
-  },
-  {
-    type: StageType.RIDDLE,
-    riddle: {
-      location: "Shower",
-      clue: "... .... --- .-- . .-.",
-      hint: "Morse",
-      code: "1034",
-    },
-  },
-  {
-    type: StageType.CHALLENGE,
-    challenge: {
-      group: true,
-      task:
-        "Make a sandcastle taller than the waist of your shortest team member",
-    },
-  },
-  {
-    type: StageType.RIDDLE,
-    riddle: {
-      location: "Defibrillator",
-      clue: "N3 W20",
-      hint: "Shower => Direction => Steps",
-      code: "8710",
-    },
-  },
-  {
-    type: StageType.CHALLENGE,
-    challenge: {
-      group: false,
-      task: "Do a backflip off a swing",
-    },
-  },
-  {
-    type: StageType.RIDDLE,
-    riddle: {
-      location: "Takapuna Boat Club",
-      clue: "A Catnap About Bulk",
-      hint: "Takapuna Anagram",
-      code: "1234",
-    },
-  },
-  {
-    type: StageType.CHALLENGE,
-    challenge: {
-      group: false,
-      task:
-        "Stand at the front of the biggest boat and reinact the 'I'm Flying' Titanic Scene",
+      task: "Let the Owl give you a shoulder ride",
     },
   },
   {
@@ -142,22 +74,6 @@ export const stages: Stage[] = [
     challenge: {
       group: false,
       task: "Crawl through one letter and jump over one letter",
-    },
-  },
-  {
-    type: StageType.RIDDLE,
-    riddle: {
-      location: "Giant Owl",
-      clue: "巨大なフクロウ",
-      hint: "Starbucks",
-      code: "1773",
-    },
-  },
-  {
-    type: StageType.CHALLENGE,
-    challenge: {
-      group: false,
-      task: "Let the Owl give you a shoulder ride",
     },
   },
   {
@@ -190,6 +106,70 @@ export const stages: Stage[] = [
     challenge: {
       group: true,
       task: "Fit all people on one swing and swing it",
+    },
+  },
+  {
+    type: StageType.RIDDLE,
+    riddle: {
+      location: "Lake Pupuke Jetty",
+      clue: "-36.7853104, 174.7672319",
+      hint: "Jetty",
+      code: "3456",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: false,
+      task: "Dunk your head underwater",
+    },
+  },
+  {
+    type: StageType.RIDDLE,
+    riddle: {
+      location: "Sink",
+      clue: "I have a plug with no electricity",
+      hint: "Outdoor Sink",
+      code: "2979",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: false,
+      task: "Do a hand stand for 5 seconds",
+    },
+  },
+  {
+    type: StageType.RIDDLE,
+    riddle: {
+      location: "Above Rope Swing",
+      clue: "a+💑l=b 🌹s=p s+💍r=w",
+      hint: "Above Rope Swing",
+      code: "5003",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: false,
+      task: "Climb half way up the tallest rope",
+    },
+  },
+  {
+    type: StageType.RIDDLE,
+    riddle: {
+      location: "Chimney",
+      clue: "I'm a heavy smoker so they said. I stand tall, big and red.",
+      hint: "Santa might come down me",
+      code: "4799",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: false,
+      task: "Make an Instagram Story Post and get 30 views",
     },
   },
   {
@@ -264,65 +244,85 @@ export const stages: Stage[] = [
   {
     type: StageType.RIDDLE,
     riddle: {
-      location: "Lake Pupuke Jetty",
-      clue: "-36.7853104, 174.7672319",
-      hint: "Jetty",
-      code: "3456",
+      location: "Takapuna Boat Club",
+      clue: "A Catnap About Bulk",
+      hint: "Takapuna Anagram",
+      code: "1234",
     },
   },
   {
     type: StageType.CHALLENGE,
     challenge: {
       group: false,
-      task: "Dunk your head underwater",
+      task:
+        "Stand at the front of the biggest boat and reinact the 'I'm Flying' Titanic Scene",
     },
   },
   {
     type: StageType.RIDDLE,
     riddle: {
-      location: "Sink",
-      clue: "I have a plug with no electricity",
-      hint: "Outdoor Sink",
-      code: "2979",
+      location: "Hamster Wheel",
+      clue: "Roue de Hamster",
+      hint: "French",
+      code: "2938",
     },
   },
   {
     type: StageType.CHALLENGE,
     challenge: {
       group: false,
-      task: "Do a hand stand for 5 seconds",
+      task: "Do a full 360 including going upside down",
+    },
+  },
+  {
+    type: StageType.AUDIO,
+    audio: {
+      location: "Tree Stump",
+      sound: new Audio(
+        "https://www.soundjay.com/mechanical/sounds/chainsaw-03.mp3"
+      ),
+      hint: "Tree Stump",
+      code: "9149",
+    },
+  },
+  {
+    type: StageType.CHALLENGE,
+    challenge: {
+      group: true,
+      task: "Go down the biggest slide at the park",
     },
   },
   {
     type: StageType.RIDDLE,
     riddle: {
-      location: "Above Rope Swing",
-      clue: "a+💑l=b 🌹s=p s+💍r=w",
-      hint: "Above Rope Swing",
-      code: "5003",
+      location: "Shower",
+      clue: "... .... --- .-- . .-.",
+      hint: "Morse",
+      code: "1034",
     },
   },
   {
     type: StageType.CHALLENGE,
     challenge: {
-      group: false,
-      task: "Climb half way up the tallest rope",
+      group: true,
+      task:
+        "Make a sandcastle taller than the waist of your shortest team member",
     },
   },
   {
     type: StageType.RIDDLE,
     riddle: {
-      location: "Chimney",
-      clue: "I'm a heavy smoker so they said. I stand tall, big and red.",
-      hint: "Santa might come down me",
-      code: "4799",
+      location: "Defibrillator",
+      clue: "N3 W20",
+      hint: "Shower => Direction => Steps",
+      code: "8710",
     },
   },
   {
     type: StageType.CHALLENGE,
     challenge: {
       group: false,
-      task: "Make an Instagram Story Post and get 30 views",
+      task: "Do a backflip off a swing",
     },
   },
   {
