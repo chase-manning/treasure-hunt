@@ -264,22 +264,6 @@ export const stages: Stage[] = [
   {
     type: StageType.RIDDLE,
     riddle: {
-      location: "Cannons",
-      clue: "What a pirate would use to shoot down another ship",
-      hint: "Behind the Mall",
-      code: "4188",
-    },
-  },
-  {
-    type: StageType.CHALLENGE,
-    challenge: {
-      group: false,
-      task: "Ride the cannon like a surf board!",
-    },
-  },
-  {
-    type: StageType.RIDDLE,
-    riddle: {
       location: "Lake Pupuke Jetty",
       clue: "-36.7853104, 174.7672319",
       hint: "Jetty",
