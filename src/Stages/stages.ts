@@ -141,7 +141,7 @@ export const stages: Stage[] = [
     type: StageType.CHALLENGE,
     challenge: {
       group: false,
-      task: "Walk across the letters",
+      task: "Crawl through one letter and jump over one letter",
     },
   },
   {
