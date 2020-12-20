@@ -116,7 +116,7 @@ export const stages: Stage[] = [
     riddle: {
       location: "Takapuna Boat Club",
       clue: "A Catnap About Bulk",
-      hint: "Anagram",
+      hint: "Takapuna Anagram",
       code: "1234",
     },
   },
