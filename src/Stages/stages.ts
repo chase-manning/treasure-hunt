@@ -90,8 +90,9 @@ export const stages: Stage[] = [
   {
     type: StageType.CHALLENGE,
     challenge: {
-      group: false,
-      task: "Have a shower",
+      group: true,
+      task:
+        "Make a sandcastle taller than the waist of your shortest team member",
     },
   },
   {
