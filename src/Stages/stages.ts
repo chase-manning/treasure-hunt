@@ -186,7 +186,8 @@ export const stages: Stage[] = [
     type: StageType.CHALLENGE,
     challenge: {
       group: true,
-      task: "Buy a bottle of rum and finish it between you",
+      task:
+        "Buy a bottle of rum and finish it between you. (180-200 ml bottle)",
     },
   },
   {
