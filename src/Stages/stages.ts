@@ -194,7 +194,7 @@ export const stages: Stage[] = [
     type: StageType.RIDDLE,
     riddle: {
       location: "Library",
-      clue: "Building with the most stories",
+      clue: "The smallest building with the most stories",
       hint: "Stories has two meanings",
       code: "8872",
     },
