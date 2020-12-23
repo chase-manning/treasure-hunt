@@ -137,7 +137,7 @@ export const stages: Stage[] = [
     type: StageType.CHALLENGE,
     challenge: {
       group: false,
-      task: "Do a hand stand for 5 seconds",
+      task: "Do a hand stand for 4 seconds",
     },
   },
   {
