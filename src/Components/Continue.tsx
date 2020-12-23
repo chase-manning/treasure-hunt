@@ -55,8 +55,18 @@ const Continue = (props: Props) => {
   const [code, setCode] = useState("");
   const [error, setError] = useState(false);
 
+  const correctCode = () => {
+    if (props.stage.type === StageType.RIDDLE) return props.stage.riddle?.code;
+    else if (props.stage.type === StageType.PHOTO)
+      return props.stage.photo?.code;
+    else if (props.stage.type === StageType.AUDIO)
+      return props.stage.audio?.code;
+    else if (props.stage.type === StageType.CHALLENGE) return "404";
+    else return "404";
+  };
+
   const checkCode = () => {
-    if (code === props.stage.riddle?.code || code === "meow") props.nextPage();
+    if (code === correctCode() || code === "meow") props.nextPage();
     else setError(true);
   };
 
