@@ -57,7 +57,7 @@ export const stages: Stage[] = [
     type: StageType.CHALLENGE,
     challenge: {
       group: false,
-      task: "Let the Owl give you a shoulder ride",
+      task: "Get a photo of a stranger posing with the owl",
     },
   },
   {
@@ -88,8 +88,8 @@ export const stages: Stage[] = [
   {
     type: StageType.CHALLENGE,
     challenge: {
-      group: false,
-      task: "Get a photo of a stranger posing with the statue",
+      group: true,
+      task: "Sit on the ground in a circle and meditate",
     },
   },
   {
@@ -97,7 +97,7 @@ export const stages: Stage[] = [
     riddle: {
       location: "Park Tunnel",
       clue: "Become a Mole",
-      hint: "Moles tunnel into the ground and make holes",
+      hint: "Moles tunnel into the ground and make holes, there's one nearby",
       code: "6932",
     },
   },
@@ -129,7 +129,7 @@ export const stages: Stage[] = [
     riddle: {
       location: "Sink",
       clue: "I have a plug with no electricity",
-      hint: "Outdoor Sink",
+      hint: "Outdoor Sink nearby",
       code: "2979",
     },
   },
@@ -145,7 +145,7 @@ export const stages: Stage[] = [
     riddle: {
       location: "Above Rope Swing",
       clue: "a+💑l=b 🌹s=p s+💍r=w",
-      hint: "Above Rope Swing",
+      hint: "Above Rope Swing nearby",
       code: "5003",
     },
   },
@@ -161,7 +161,7 @@ export const stages: Stage[] = [
     riddle: {
       location: "Chimney",
       clue: "I'm a heavy smoker so they said. I stand tall, big and red.",
-      hint: "Santa might come down me",
+      hint: "Santa might come down me, nearby",
       code: "4799",
     },
   },
@@ -211,7 +211,7 @@ export const stages: Stage[] = [
     riddle: {
       location: "Tennis Court",
       clue: "796.342 GIFF",
-      hint: "Melvil Dewey",
+      hint: "Melvil Dewey, they have a searchable website",
       code: "8849",
     },
   },
@@ -264,7 +264,7 @@ export const stages: Stage[] = [
     riddle: {
       location: "Hamster Wheel",
       clue: "Roue de Hamster",
-      hint: "French",
+      hint: "French, near where you started",
       code: "2938",
     },
   },
@@ -282,7 +282,7 @@ export const stages: Stage[] = [
       sound: new Audio(
         "https://www.soundjay.com/mechanical/sounds/chainsaw-03.mp3"
       ),
-      hint: "Tree Stump",
+      hint: "Tree Stump nearby",
       code: "9149",
     },
   },
@@ -298,7 +298,7 @@ export const stages: Stage[] = [
     riddle: {
       location: "Shower",
       clue: "... .... --- .-- . .-.",
-      hint: "Morse",
+      hint: "Morse, nearby",
       code: "1034",
     },
   },
@@ -315,7 +315,7 @@ export const stages: Stage[] = [
     riddle: {
       location: "Defibrillator",
       clue: "N3 W20",
-      hint: "Shower => Direction => Steps",
+      hint: "Shower => Direction => Steps, the answer is shocking!!",
       code: "8710",
     },
   },
@@ -331,7 +331,7 @@ export const stages: Stage[] = [
     photo: {
       location: "Mens Bathroom",
       image: treasureMap,
-      hint: "A Chest in the Mens Bathroom",
+      hint: "Wheeee!!!!",
       code: "4733",
     },
   },
