@@ -144,7 +144,7 @@ export const stages: Stage[] = [
     type: StageType.RIDDLE,
     riddle: {
       location: "Above Rope Swing",
-      clue: "a+💑l=b 🌹s=p s+💍r=w",
+      clue: "a+💑(l=b) 🌹(s=p) s+💍(r=w)",
       hint: "Above Rope Swing nearby",
       code: "5003",
     },
