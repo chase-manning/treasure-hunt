@@ -169,7 +169,7 @@ export const stages: Stage[] = [
     type: StageType.CHALLENGE,
     challenge: {
       group: false,
-      task: "Make an Instagram Story Post and get 30 views",
+      task: "Make an Instagram Story Post and get 20 views",
     },
   },
   {
